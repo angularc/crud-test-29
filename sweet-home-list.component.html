@@ -1,0 +1,22 @@
+<h6>Selections</h6>
+<table class="table table-hoover table-sm">
+<thead class="bg-dark text-white">
+<td>FullName-Addess</td>
+<td>Email</td>
+<td>Contact</td>
+<td>Rooms</td>
+<td>Budject</td>
+<td>Act</td>
+</thead>
+    <tr *ngFor="let home of homeservice.HomeListsData">
+   <td>{{home.FullName}}-{{home.HAddress}}</td>
+   <td>{{home.Email}}</td>
+   <td>{{home.Contact}}</td>
+   <td>{{home.NumberofRooms}}</td>
+   <td>{{home.HBudjet}}</td>
+   <td>
+   <a class="btn text-info" (click)="showmyhome(home)"> <i class="fa fa-pencil-square-o"></i></a>
+   <a class="btn text-danger" (click)="onDelete(home.HomeTypeID)"><i class="fa fa-trash-o"></i></a>
+   </td>
+    </tr>
+</table>

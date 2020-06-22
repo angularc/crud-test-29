@@ -1,0 +1,30 @@
+<h6>Operations</h6>
+<form class="my-home" #MyHomeDataCenter="ngForm" (ngSubmit)="onSubmit(MyHomeDataCenter)">
+    <input type="hidden" name="HomeTypeID" #HomeTypeID="ngModel" [(ngModel)]="homeservice.SelectedHome.HomeTypeID">
+    <div class="form-row">
+<div class="form-group col-md-6">
+    <input class="form-control" name="FullName" #FullName="ngModel" [(ngModel)]="homeservice.SelectedHome.FullName" placeholder="Home Name">
+</div>
+<div class="form-group col-md-6">
+    <input class="form-control" name="HAddress" #HAddress="ngModel" [(ngModel)]="homeservice.SelectedHome.HAddress" placeholder="Home Address">
+</div>
+<div class="form-group col-md-12">
+    <input class="form-control" name="Email" #Email="ngModel" [(ngModel)]="homeservice.SelectedHome.Email" placeholder="Email">
+</div>
+<div class="form-group col-md-6">
+    <input class="form-control" name="Contact" #Contact="ngModel" [(ngModel)]="homeservice.SelectedHome.Contact" placeholder="Contact">
+</div>
+<div class="form-group col-md-6">
+    <input class="form-control" name="NumberofRooms" #NumberofRooms="ngModel" [(ngModel)]="homeservice.SelectedHome.NumberofRooms" placeholder="NumberofRooms">
+</div>
+<div class="form-group col-md-12">
+    <input class="form-control" name="HBudjet" #HBudjet="ngModel" [(ngModel)]="homeservice.SelectedHome.HBudjet" placeholder="Home Budject">
+</div>
+<div class="form-group col-md-8">
+    <button type="submit" class="btn btn-info btn-block"><i class="fa fa-floppy-o "></i>   Submit</button>
+</div>
+<div class="form-group col-md-4">
+    <button type="button" class="btn btn-dark btn-block" (click)="ResetHome(MyHomeDataCenter)"><i class="fa fa-repeat"></i>Reset</button>
+</div>
+    </div>
+</form>
